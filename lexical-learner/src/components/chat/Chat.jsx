@@ -19,7 +19,6 @@ const Chat = (props) => {
   const [current, setCurrent] = useState("");
   //username
   const [username, setUsername] = useState(
-    props.user.username ||
       new Date(Date.now()).getTime +
         ":" +
         new Date(Date.now()).getMilliseconds()
@@ -291,9 +290,9 @@ const Chat = (props) => {
       <div className="chat-rightbox">
         <div className="chat-righttitle">
           {current}
-          <button className="chat-righttitle-userprofile">
+          {/* <button className="chat-righttitle-userprofile">
             <BsIcons.BsPerson />
-          </button>
+          </button> */}
         </div>
         {/* spawns messages */}
         <div className="chat-messages">
@@ -305,14 +304,14 @@ const Chat = (props) => {
                       <div className="chat-mymessage">
                         <span className="chat-messagebox">{msg.msg}</span> :
                         <span className="chat-message-logo">
-                          {props.user.icon}
+                          {<BsIcons.BsApple />}
                         </span>
                       </div>
                     ) : (
                       <div className="chat-theirmessage">
                         <div style={{ display: "flex" }}>
                           <span className="chat-message-logo">
-                            {props.user.icon}
+                            <IoIcons.IoMdRocket/>
                           </span>
                           :
                           <div>

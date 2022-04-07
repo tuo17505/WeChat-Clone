@@ -4,8 +4,8 @@
 
     background-color: var(--navbar-bg-color);
     display: flex;
-    justify-content: space-between;
-    box-shadow: 0 5px 10px 1px gray;
+    justify-content: center;
+    box-shadow: 0 2px 20px 1px gray;
 }
 
 .Navbar ul {
@@ -20,6 +20,7 @@
 .Navbar li {
     padding: 0.75rem;  
     color: white; 
+    font-size: 2rem;
 }
 
 .Navbar a {

@@ -1,125 +1,141 @@
-.HomeLoggedIn {
+.Home {
     background-color: white;
 }
 
-.HomeLoggedIn .intro {
+.Home .intro {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
-    gap: 2rem;
-    padding-top: 1rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 }
 
-.HomeLoggedIn .intro-logo {
+.Home .intro-logo {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin: 2rem;
 }
 
-.HomeLoggedIn .intro-aside {
+.Home .intro-aside {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
     color: black;
-    gap: 1rem;
-    margin: 2rem;
 }
 
-.HomeLoggedIn .intro-title {
+.Home .intro-title {
     font-weight: bolder;
+    font-size: 2.25rem;
 }
 
-.HomeLoggedIn .intro-getstarted {
+.Home .intro-links{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.Home .intro-links a{
+    font-size: 20px;
     text-decoration: none;
-    color: white;
-    background-color: black;
-    width: max-content;
-    padding: 0.25rem;
-    border: 2px solid black;
-    border-radius: 5%;
-    font-size: 1.5rem;
-    filter: drop-shadow(0 0 0.25rem grey);
+    color: black;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    border-radius: 3px;
+    transition: all 0.2s ease-in;
 }
 
-.HomeLoggedIn .intro-features {
-    list-style: square;
+.Home .intro-links a:hover {
+    background-color: black;
+    color: white;
+}
+
+.Home .intro-features {
+    list-style: none;
     margin: 0;
     padding: 0;
     font-size: 1.5rem;
-    margin-left: 1.5rem;
 }
 
-.HomeLoggedIn .features {
+.Home .features {
     background-color: black;
     color: white;
     padding: 0.5rem;
+    text-align: center;
 }
 
-.HomeLoggedIn .features ul {
+.Home .features ul {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
 }
 
-.HomeLoggedIn .features li {
+.Home .features li {
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
-    margin-right: 5rem;
     line-height: 2rem;
     text-align: center;
+    margin: 1rem;
 }
 
-.HomeLoggedIn .features-title {
-    font-weight: 600;
-    font-size: 1.5rem;
+.Home .feautures img{
+    width: 100px;
+    margin: 0 auto;
+    flex-shrink: 1;
 }
 
-.HomeLoggedIn .quickdemo {
-    border: 5px dashed hotpink;
+.Home .quickdemo {
     border: none;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.HomeLoggedIn footer {
+
+
+.Home footer {
     background-color: rgb(179, 179, 179);
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 1.25rem;
     font-weight: 500Z;
 }
 
-@media screen and (max-width: 428px){
-    .HomeLoggedIn .intro {
+@media screen and (max-width: 800px){
+    .Home .intro {
         display: flex;
         flex-direction: column;
         height: 100%;
         margin: 10px;
     }
 
-    .HomeLoggedIn .intro-title {
+    .Home .intro-title {
         width: 100%;
         text-align: center;
     }
 
-    .HomeLoggedIn .intro-features {
+    .Home .intro-features {
         margin: 0 auto;
     }
 
-    .HomeLoggedIn .intro-getstarted{
+    .Home .intro-getstarted{
         margin: 0 auto;
     }
 
-    .HomeLoggedIn .features ul{
+    .Home .features ul{
         display: block;
     }
 
-    .HomeLoggedIn .features li{
+    .Home .features li{
         width: 100%;
         margin: 0 auto;
         margin-bottom: 1rem;
     }
+
+    .feautures-webchatimg{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
 }

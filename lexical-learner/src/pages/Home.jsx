@@ -1,81 +1,78 @@
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
 import * as BsIcons from "react-icons/bs";
-import "./styles/Home.css";
-import Chat from "../components/chat/Chat"
-
-import webchatimg from "./../images/webchatdemo.jpg"
+import * as AiIcons from "react-icons/ai";
+import "./home.css";
+import Chat from "../components/chat/Chat";
+import webchatimg from "./../images/webchatdemo.jpg";
+import chattranimg from "./../images/chat1.png";
 
 const Home = () => {
-
-  const user = {
-    icon: <BsIcons.BsAward/>,
-    username: '',
-    password: '',
-    type: '',
-  }
-
   return (
     <div className="Home">
-      <Navbar />
       <section className="intro">
         <div className="intro-logo">
-          <BsIcons.BsChatSquareTextFill
+          <AiIcons.AiOutlineWechat
             style={{ fontSize: "7rem", color: "black" }}
           />
           <BsIcons.BsTranslate style={{ fontSize: "7rem", color: "black" }} />
         </div>
 
         <div className="intro-aside">
-          <span className="intro-title">
-            A Online Lexical Learning Platform for Languages Learners
+          <div>
+            <span className="intro-title">SimChat</span>
+            , A Simpler Tecent's WeChat Clone in Web.
             <br />
-          </span>
-          <ul className="intro-features">
-            <li>Real Time Text Translation</li>
-            <li>Flashcards</li>
-          </ul>
-          <a href="login" className="intro-getstarted">
-            Get Started
-          </a>
+            <span style={{ fontSize: "20px" }}>
+              Written in ReactJS, NodeJS, and Express. <br />
+              Used Socket.io, and Google Tranlsate.
+            </span>
+            <div className="intro-links">
+              <a
+                href="https://github.com/tuo17505/WeChat-Clone"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
+              <a href="#quickdemo">Demo</a>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="features">
+        <h4 style={{fontSize: "20px"}}>Features</h4>
         <ul>
           <li>
-            <span className="features-title">Real Time Text Translation</span>
-            <span>Translates to hundred of languages</span>
-            <span>Powered by Google Translate</span>
-            <img src={webchatimg} alt="web chat" className="feautures-webchatimg"/>
-            
+            <span>Join and Create Rooms</span>
+            <span>Chat with Anyone</span>
+            <span>Powered by Socket.io</span>
+            <img
+              src={webchatimg}
+              alt="web chat"
+              style={{maxWidth: "400px", borderRadius: "2.5px"}}
+            />
           </li>
           <li>
-            <span className="features-title">Flashcards</span>
-            <span>Convert cards to quizes / tests</span>
-            <span>Fully Customizable</span>
-            <span>Games</span>
-            <BsIcons.BsImages style={{ fontSize: "15rem", margin: "0 auto" }} />
+            <span>Text Translation</span>
+            <span>Translates messages to hundred of languages</span>
+            <span>Powered by Google Translate</span>
+            <img
+              src={chattranimg}
+              alt="web chat"
+              style={{maxWidth: "400px", borderRadius: "2.5px"}}
+            />
           </li>
         </ul>
       </section>
 
-      <section className="quickdemo">
-        <h2 style={{textAlign:'center'}}>Web Chat Demo</h2>
-        {user.username !== "" ? 
-          <Chat user={{
-            user: user, 
-          }} />
-          :
-          <Chat user={{
-            icon: <BsIcons.BsExclamationDiamond/>,
-            demo: true,
-          }}/>
-        }
+      <section className="quickdemo" id="quickdemo">
+        <h2 style={{ textAlign: "center" }}>SimChat</h2>
+        <Chat />
       </section>
 
       <footer>
-        <span>Lexical</span>
+        SimChat
       </footer>
     </div>
   );
