@@ -50,7 +50,7 @@ const Home = () => {
             <img
               src={webchatimg}
               alt="web chat"
-              style={{maxWidth: "400px", borderRadius: "2.5px"}}
+              style={{maxWidth: "380px", borderRadius: "2.5px"}}
             />
           </li>
           <li>
@@ -60,7 +60,7 @@ const Home = () => {
             <img
               src={chattranimg}
               alt="web chat"
-              style={{maxWidth: "400px", borderRadius: "2.5px"}}
+              style={{maxWidth: "380px", borderRadius: "2.5px"}}
             />
           </li>
         </ul>
