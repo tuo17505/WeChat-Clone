@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import "./roommodal.css";
-const axios = require("axios");
+import axios from "axios";
 
 const Roommodal = (props) => {
   const publicrooms = [
