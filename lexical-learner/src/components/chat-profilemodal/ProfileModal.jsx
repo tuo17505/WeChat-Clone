@@ -1,4 +1,3 @@
-import React from "react";
 import "./profileModal.css";
 
 const ProfileModal = (props) => {
