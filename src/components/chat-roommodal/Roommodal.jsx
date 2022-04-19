@@ -129,8 +129,8 @@ const Roommodal = (props) => {
       alert("missing room name or room type");
     } else {
       let API;
-      if (process.env.CHAT_SERVER_URL) {
-        API = process.env.CHAT_SERVER_URL + "/chat/rooms";
+      if (process.env.REACT_APP_CHAT_SERVER_URL) {
+        API = process.env.REACT_APP_CHAT_SERVER_URL + "/chat/rooms";
       }
       axios
         .get(API || "http://localhost:8000/chat/rooms")
