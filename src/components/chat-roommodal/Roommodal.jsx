@@ -132,6 +132,7 @@ const Roommodal = (props) => {
       if (process.env.REACT_APP_CHAT_SERVER_URL) {
         API = process.env.REACT_APP_CHAT_SERVER_URL + "/chat/rooms";
       }
+      console.log(process.env.REACT_APP_CHAT_SERVER_URL);
       axios
         .get(API/*  || "http://localhost:8000/chat/rooms" */)
         .then((res) => {
