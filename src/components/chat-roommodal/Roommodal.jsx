@@ -132,9 +132,8 @@ const Roommodal = (props) => {
       if (process.env.REACT_APP_CHAT_SERVER_URL) {
         API = process.env.REACT_APP_CHAT_SERVER_URL + "/chat/rooms";
       }
-      console.log(process.env.REACT_APP_CHAT_SERVER_URL);
       axios
-        .get(API/*  || "http://localhost:8000/chat/rooms" */)
+        .get(API /*  || "http://localhost:8000/chat/rooms" */)
         .then((res) => {
           //console.log(res.data);
           if (!res.data.includes(room, 0)) {
@@ -208,8 +207,8 @@ const Roommodal = (props) => {
         alert("Room Already Joined");
       } else {
         let API;
-        if (process.env.CHAT_SERVER_URL) {
-          API = process.env.CHAT_SERVER_URL + "/chat/rooms";
+        if (process.env.REACT_APP_CHAT_SERVER_URL) {
+          API = process.env.REACT_APP_CHAT_SERVER_URL + "/chat/rooms";
         }
         axios
           .get(API || "http://localhost:8000/chat/rooms")
